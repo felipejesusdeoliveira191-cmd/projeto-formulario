@@ -1,0 +1,99 @@
+/* * (Seletor Universal): Aplica as regras em absolutamente todas as tags da página */
+* {
+    margin: 0;          /* Remove as margens padrões de fora dos elementos */
+    padding: 0;         /* Remove os espaçamentos padrões de dentro dos elementos */
+    box-sizing: border-box; /* Garante que bordas e paddings não aumentem o tamanho total do elemento */
+}
+
+/* body: Estiliza o fundo do site e controla como o formulário se posiciona na tela */
+body {
+    background: linear-gradient(135deg, #353535, #3b0505); /* Cria a mistura de fundo do cinza para o vermelho escuro */
+    height: 100vh;      /* Faz o fundo ocupar 100% da altura da tela visível */
+    font-family: "Segoe UI", Arial, sans-serif; /* Define a fonte/letra do texto */
+    display: flex;      /* Ativa o modo de layout flexível */
+    justify-content: center; /* Centraliza o formulário na horizontal (esquerda/direita) */
+    align-items: center;    /* Centraliza o formulário na vertical (cima/baixo) */
+    flex-direction: column; /* Alinha o conteúdo em formato de coluna */
+}
+
+/* .form h2: Estiliza o título principal que está dentro do formulário */
+.form h2 {
+    color: #ffffff;             /* Deixa a cor do título totalmente branca */
+    text-align: center;         /* Coloca o texto no centro horizontal */
+    font-size: 22px;            /* Define o tamanho da letra do título */
+    margin-bottom: 10px;        /* Dá um espaço abaixo do título para não grudar nos campos */
+    text-transform: capitalize; /* Força a primeira letra de cada palavra a ficar maiúscula */
+}
+
+/* .form: Estiliza a caixinha principal do formulário (efeito de vidro) */
+.form {
+    background: rgba(117, 117, 117, 0.15); /* Cor cinza bem transparente (15% de opacidade) */
+    backdrop-filter: blur(10px); /* Cria o efeito de desfoque/vidro fosco no fundo */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Uma borda escura quase invisível */
+    border-radius: 12px;        /* Arredonda os 4 cantos da caixinha */
+    display: flex;              /* Ativa o flexbox dentro da caixa */
+    flex-direction: column;     /* Faz com que inputs e botões fiquem um embaixo do outro */
+    padding: 50px;              /* Espaço interno para o conteúdo não ficar apertado nas bordas */
+    gap: 16px;                  /* Cria um espaço padrão automático entre cada elemento */
+    width: 100%;                /* O formulário pode esticar até preencher o espaço disponível */
+    max-width: 600px;           /* Limita a largura máxima para o formulário não ficar gigante */
+    color: rgb(189, 189, 189);  /* Define a cor padrão dos textos internos */
+}
+
+/* input: Estiliza as caixas onde o usuário digita as informações */
+input {
+    background: rgba(255, 255, 255, 0.1); /* Fundo branco bem transparente */
+    text-align: center;         /* Centraliza o texto digitado e o placeholder no meio */
+    padding: 10px;              /* Dá um espaço interno para o texto respirar */
+    border-radius: 6px;         /* Arredonda os cantos da caixinha de entrada */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Uma borda fina e clarinha */
+    color: #ffffff;             /* Deixa a cor da letra digitada branca */
+}
+
+/* input:hover: Estilo que acontece quando o usuário passa o mouse por cima do input */
+input:hover {
+    background-color: #686767;  /* Muda o fundo do input para um cinza mais escuro */
+}
+
+/* .form input::placeholder: Modifica especificamente o texto de dica interno do input */
+.form input::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Deixa o texto de dica semi-transparente */
+}
+
+/* label: Estiliza os textos de identificação (ex: "Insira seu nome:") */
+label {
+    color: #cacaca;             /* Cor cinza claro para o texto */
+    font-size: 17px;            /* Tamanho da letra */
+    font-weight: 500;           /* Deixa o texto levemente mais "cheinho" (negrito sutil) */
+    margin-bottom: -6px;        /* Puxa o input de baixo para mais perto do texto */
+    text-align: left;           /* Alinha o texto na esquerda */
+    padding-left: 4px;          /* Dá um pequeno empurrãozinho para a direita */
+}
+
+/* button: Estiliza o botão de cadastro principal */
+button {
+    padding: 12px;              /* Altura e espaçamento interno do botão */
+    font-size: 16px;            /* Tamanho da letra */
+    font-weight: bold;          /* Deixa a letra em negrito */
+    text-transform: uppercase;   /* Força todo o texto a ficar em MAIÚSCULO */
+    border: none;               /* Remove a borda cinza padrão do navegador */
+    border-radius: 8px;         /* Arredonda os cantos do botão */
+    cursor: pointer;            /* Transforma a seta do mouse na "mãozinha" de clique */
+    background-color: #8b1414;  /* Cor de fundo vermelha escura */
+    color: #ffffff;             /* Letra do botão na cor branca */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Cria uma animação suave ao mudar de estado */
+    width: 200px;               /* Largura fixa do botão */
+    max-width: 100%;            /* Impede que o botão quebre em telas muito pequenas */
+    margin: 10px auto 0;        /* O 'auto' nas laterais centraliza o botão na caixa */
+}
+
+/* button:hover: Estilo que acontece quando o usuário põe o mouse em cima do botão */
+button:hover {
+    background-color: #a81c1c;  /* Muda para um vermelho mais claro e vivo */
+    transform: scale(1.02);     /* Dá um efeito sutil de crescer (2% maior) */
+}
+
+/* .form button:active: Estilo que acontece no exato clique do mouse */
+.form button:active {
+    transform: scale(0.98);     /* Dá um efeito de "afundar" (2% menor) ao ser clicado */
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link: Conecta o arquivo de estilos (CSS) a esta página -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- form: Cria a caixa principal que vai agrupar todo o formulário -->
+    <form class="form">
+        <h2>formulario de cadastro</h2>
+
+        <!-- label: É o texto de instrução para o usuário saber o que digitar -->
+        <label>Insira seu nome:</label>
+        <!-- input: Caixa de texto. O 'id' serve para o JavaScript achar este campo -->
+        <input id="usuario" type="text" placeholder="USUARIO123">
+
+        <label>Insira seu email:</label>
+        <!-- input type="email": Garante que o usuário digite um e-mail válido -->
+        <input id="email" type="email" placeholder="USUARIO123@GMAIL.COM">
+
+        <label>Insira a senha:</label>
+        <!-- input type="password": Esconde os caracteres digitados por segurança -->
+        <input id="senha" type="password" placeholder="Usuario123@">
+
+        <!-- div: Uma caixinha invisível usada aqui apenas para envelopar o botão -->
+        <div>
+            <!-- button type="submit": O botão que dispara o envio dos dados do formulário -->
+            <button id="button" type="submit">cadastrar-se</button>
+        </div>
+    </form>
+
+    <!-- script: Conecta o arquivo de lógica (JavaScript) bem no final da página -->
+    <script src="script.js"></script>
+</body>
+</html>
